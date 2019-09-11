@@ -4867,3 +4867,12 @@ Processing by AuthorsController#index as HTML
 Completed 200 OK in 732ms (Views: 731.3ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/authors/" for 50.247.72.73 at 2019-09-11 23:33:03 +0000
+Cannot render console from 50.247.72.73! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 21ms (Views: 17.1ms | ActiveRecord: 1.3ms)
+
+
