@@ -8,6 +8,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def new
+    @post = Post.new(author_id: params[:author_id])
+  end
+
   def show
     if params[:author_id]
       @post = Author.find(params[:author_id]).posts.find(params[:id])
@@ -16,9 +20,7 @@ class PostsController < ApplicationController
     end
   end
 
-  def new
-    @post = Post.new(author_id: params[:author_id])
-  end
+
 
   def create
     @post = Post.new(post_params)
