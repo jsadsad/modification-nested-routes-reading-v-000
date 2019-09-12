@@ -5855,3 +5855,27 @@ Processing by PostsController#new as HTML
 Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/authors/8/posts/new" for 50.247.72.73 at 2019-09-12 00:05:23 +0000
+Cannot render console from 50.247.72.73! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"8"}
+  [1m[36mAuthor Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered posts/_form.html.erb (6.8ms)
+  Rendered posts/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/posts" for 50.247.72.73 at 2019-09-12 00:05:30 +0000
+Cannot render console from 50.247.72.73! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rElaitrwYDxXLhtqVivQ9S1AF/ILGWY1VkFO9n1JGRMnhK+iiHPVX2vs4wHH2WWP15FA202kptlGUK81MzzreA==", "post"=>{"author_id"=>"8", "title"=>"testing", "description"=>"testing"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at", "author_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Testing"], ["description", "testing"], ["created_at", "2019-09-12 00:05:30.091451"], ["updated_at", "2019-09-12 00:05:30.091451"], ["author_id", 8]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://159.89.134.39:50828/posts/20
+Completed 302 Found in 68ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/posts/20" for 50.247.72.73 at 2019-09-12 00:05:30 +0000
