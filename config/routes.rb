@@ -5,5 +5,4 @@ Rails.application.routes.draw do
   end
 
   resources :post
-  resources :authors
 end
