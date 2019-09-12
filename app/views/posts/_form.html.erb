@@ -4,4 +4,8 @@
     <%= f.select :author_id, options_from_collection_for_select(Author.all, :id, :name) %><br>
   <% end %>
   <%= f.hidden_field :author_id %>
+  <%= f.text_field :title %><br>
+  <label>Post Description</label><br>
+  <%= f.text_area :description %><br>
+  <%= f.submit %>
 <% end %>
